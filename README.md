@@ -10,17 +10,19 @@ Projeto simples para montar lista de compras, onde haverá uma listagem de lista
 <p>email: String</p>
 <p>password: String</p>
 
+
 #### item
-name: String
-email: String
-description: String
-img: String
+<p>name: String</p>
+<p>email: String</p>
+<p>description: String</p>
+<p>img: String</p>
+
 
 #### shopping_cart
-user_id: String
-description: String
-items: Array
-is_finished: Boolean
+<p>user_id: String</p>
+<p>description: String</p>
+<p>items: Array</p>
+<p>is_finished: Boolean</p>
 
 ### Rotas Implementadas:
 
