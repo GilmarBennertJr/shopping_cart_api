@@ -14,6 +14,7 @@ module.exports = function (app) {
                 var auth_decoded = jwt.verify(authorization, app.config.jwt_password)                
                 
                 req.decoded = {
+                    uid: auth_decoded.uid,
                     un: app.util.Crypto.decrypt(auth_decoded.un)
                 }
                                 

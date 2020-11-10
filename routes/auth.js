@@ -12,6 +12,7 @@ module.exports = (app) => {
                 } else {
                     if (users && users.length === 1) {
                         var token = jwt.sign({
+                            uid: users[0]._id,
                             un: app.util.Crypto.encrypt(users[0].name)
                         }, app.config.jwt_password);
                         res.send(`Bearer ${token}`)
