@@ -6,9 +6,9 @@ Projeto simples para montar lista de compras, onde haverá uma listagem de lista
 
 ### Collections:
 #### user
-name: String
-email: String
-password: String
+<p>name: String</p>
+<p>email: String</p>
+<p>password: String</p>
 
 #### item
 name: String
