@@ -37,6 +37,17 @@ module.exports = (app) => {
         })
     })
 
+    app.patch('/shopping-cart/finish', (req, res) => {
+        let body = req.body
+
+        shoppingCartsCollection.updateOne({
+            user_id: req.decoded.uid,
+            _id: body.id
+        }, body)
+
+        res.sendStatus(200)
+    })
+
     app.put('/shopping-cart', (req, res) => {
         let body = req.body;
         body.user_id = req.decoded.uid
@@ -55,7 +66,7 @@ module.exports = (app) => {
     app.delete('/shopping-cart', (req, res) => {
         let body = req.body
         body.user_id = req.decode.uid
-        
+
         shoppingCartsCollection.delete({
             _id: body.shopping_cart_id
         }, (isDeleted, err) => {

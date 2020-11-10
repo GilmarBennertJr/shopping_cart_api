@@ -55,5 +55,10 @@ module.exports = (app) => {
         })
     }
 
+    this.updateOne = function (filter, body) {
+        let query = model.findOneAndUpdate(filter, body, {upsert: false})
+        query.exec()
+    }
+
     return this
 }
